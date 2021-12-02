@@ -7,8 +7,13 @@ import java.util.List;
 
 public class FindSmallestDifference {
 
+//  private String pathDir;
     private String pathDir = ("src/main/resources/datamunging/");
     private List<String> table;
+
+//  public FindSmallestDifference(String pathDir) {
+//      this.pathDir = pathDir;
+//  }
 
     public String findSmallestDifference(String fileName) {
         table = getTable(Path.of(pathDir + fileName));
