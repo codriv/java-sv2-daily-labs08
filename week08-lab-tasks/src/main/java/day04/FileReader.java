@@ -7,12 +7,11 @@ import java.util.List;
 
 public class FileReader {
 
-    private Path path = Path.of("src/test/resources/weather.dat");
-    private List<String> weatherStat;
+    private String pathDir = "src/main/resources/datamunging/";
 
-    public int findSmallestTemperatureSpread(Path path) {
+    public int findSmallestTemperatureSpread(String name) {
+        Path path = Path.of(pathDir + name);
         List<String> weatherStat = getWeatherStat(path);
-        List<String> workList = weatherStat.subList(2, weatherStat.size());
         int smallest = Integer.MAX_VALUE;
         int smallestIndex = 0;
         for (int i = 2; i < weatherStat.size() - 1; i++) {
@@ -28,6 +27,7 @@ public class FileReader {
     }
 
     public List<String> getWeatherStat(Path path) {
+        List<String> weatherStat = null;
         try {
             weatherStat = Files.readAllLines(path);
         } catch (IOException ioe) {
