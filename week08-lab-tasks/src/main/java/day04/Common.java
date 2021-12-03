@@ -48,7 +48,7 @@ public class Common {
         return table.get(smallestIndex);
     }
 
-    public int parse(List<String> table, int i, int from, int to) {
+    private int parse(List<String> table, int i, int from, int to) {
         return Integer.parseInt(table.get(i).substring(from, to));
     }
 }
