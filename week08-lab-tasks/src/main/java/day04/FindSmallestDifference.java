@@ -8,7 +8,7 @@ public class FindSmallestDifference {
     private List<String> table;
 
     public String findSmallestDifference(String fileName) {
-        table = common.getTable("football.dat");
+        table = common.getTable(fileName);
         int smallest = Integer.MAX_VALUE;
         int smallestIndex = 1;
         for (int i = 1; i < table.size(); i++) {

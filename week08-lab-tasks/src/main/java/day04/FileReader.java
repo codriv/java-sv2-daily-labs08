@@ -8,7 +8,7 @@ public class FileReader {
     private Common common = new Common();
 
     public int findSmallestTemperatureSpread(String name) {
-        weatherStat = common.getTable("weather.dat");
+        weatherStat = common.getTable(name);
         int smallest = Integer.MAX_VALUE;
         int smallestIndex = 2;
         for (int i = 2; i < weatherStat.size() - 1; i++) {
