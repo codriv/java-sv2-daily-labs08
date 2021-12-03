@@ -4,22 +4,10 @@ import java.util.List;
 
 public class FileReader {
 
-    private List<String> weatherStat;
     private Common common = new Common();
 
-    public int findSmallestTemperatureSpread(String name) {
-        weatherStat = common.getTable(name);
-        int smallest = Integer.MAX_VALUE;
-        int smallestIndex = 2;
-        for (int i = 2; i < weatherStat.size() - 1; i++) {
-            int max = common.parse(i, 6, 8);
-            int min = common.parse(i, 12, 14);
-            int spread = max - min;
-            if (spread < smallest) {
-                smallest = spread;
-                smallestIndex = i;
-            }
-        }
-        return common.parse(smallestIndex, 2, 4);
+    public int findSmallestTemperatureSpread(String fileName) {
+        int[] characterPositionsToParse = {6, 8, 12, 14};
+        return Integer.parseInt(common.getLineWithSmallestDifference(fileName, characterPositionsToParse,1, 2, 33).substring(2, 4));
     }
 }
