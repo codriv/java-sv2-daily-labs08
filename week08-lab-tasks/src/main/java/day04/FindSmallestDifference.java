@@ -8,6 +8,7 @@ public class FindSmallestDifference {
 
     public String findSmallestDifference(String fileName) {
         int[] characterPositionsToParse = {43, 45, 50, 52};
-        return common.getLineWithSmallestDifference(fileName, characterPositionsToParse, 1, 19).substring(7,23).trim();
+        int[] linesToSkip = {1, 19};
+        return common.getLineWithSmallestDifference(fileName, characterPositionsToParse, linesToSkip).substring(7,23).trim();
     }
 }

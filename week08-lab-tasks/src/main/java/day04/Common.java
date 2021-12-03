@@ -22,7 +22,7 @@ public class Common {
         return table;
     }
 
-    public List<String> getFilteredTable(List<String> table, int... lines){
+    public List<String> getFilteredTable(List<String> table, int[] lines){
         List<String> filteredTable = new ArrayList<>(List.copyOf(table));
         List<String> linesToDelete = new ArrayList<>();
         for (int line: lines) {
@@ -32,7 +32,7 @@ public class Common {
         return filteredTable;
     }
 
-    public String getLineWithSmallestDifference(String name, int[] parse, int... linesToSkip) {
+    public String getLineWithSmallestDifference(String name, int[] parse, int[] linesToSkip) {
         List<String> table = getFilteredTable(getTable(name), linesToSkip);
         int smallest = Integer.MAX_VALUE;
         int smallestIndex = 0;
