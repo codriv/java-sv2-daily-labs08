@@ -1,4 +1,4 @@
-package day04.composition;
+package day04.withcomposition;
 
 public class TableMain {
 

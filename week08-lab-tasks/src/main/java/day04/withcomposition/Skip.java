@@ -1,4 +1,4 @@
-package day04.composition;
+package day04.withcomposition;
 
 import java.util.ArrayList;
 import java.util.List;

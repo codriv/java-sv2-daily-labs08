@@ -1,4 +1,4 @@
-package day04.composition;
+package day04.withcomposition;
 
 import java.io.IOException;
 import java.nio.file.Files;
