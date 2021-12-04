@@ -14,5 +14,4 @@ class FileReaderTest {
         System.out.println(fileReader.findSmallestTemperatureSpread(fileName));
         assertEquals(14, fileReader.findSmallestTemperatureSpread(fileName));
     }
-
 }
